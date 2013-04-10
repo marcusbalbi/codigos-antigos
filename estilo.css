@@ -1,0 +1,22 @@
+.mensagem_acerto
+{
+	border:1px solid #030;
+	 background-color:#CFC;
+	  color:#030;
+	  padding:10px;
+	  margin:5px;
+	  font-size:12px;
+	  text-align:center;
+	  
+}
+
+.mensagem_erro
+{
+	border:1px solid #300;
+	 background-color:#FCC;
+	 color:#300;
+	 padding:10px;
+	  margin:5px;
+	  font-size:12px;
+	  text-align:center;
+}
