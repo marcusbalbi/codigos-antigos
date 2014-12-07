@@ -1,0 +1,19 @@
+{
+    "name": "marcus/testandophpunit",
+    "authors": [
+        {
+            "name": "Marcus Vinicius Balbi",
+            "email": "marcusbalbi@hotmail.com"
+        }
+    ],
+    "autoload" :{
+	"psr-0" :{
+	 "":"src/",
+	 "":"src/Calculator"
+	}	
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "phpunit/phpunit": "dev-master"
+    }
+}
