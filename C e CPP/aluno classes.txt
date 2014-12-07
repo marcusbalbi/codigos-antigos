@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <conio.h>
+#define TAM 2
+
+class taluno
+{
+public:
+	int mat;
+	float nota1;
+	float nota2;
+	float media;
+    float maior;
+	float menor; 
+	void calc_media (void)
+	{
+		media=(nota1+nota2)/2;
+	}
+	void maxmin_nota (void)
+	{
+		if(nota1>nota2)
+		{
+			maior=nota1;
+			menor=nota2;
+		}
+		else
+		{
+			maior=nota2;
+			menor=nota1;
+		}
+	}
+};
+
+void main (void)
+{
+	taluno aluno[TAM];
+
+	for(int i=0;i<TAM;i++)
+	{
+
+	printf("\ndigite o numero da matricula do aluno %d: ",i+1);
+	scanf("%d", &aluno[i].mat);
+	printf("\ndigite a nota 1 do aluno %d: ",i+1);
+	scanf("%f",&aluno[i].nota1);
+	printf("\ndigite a nota 2 do aluno %d: ",i+1);
+	scanf("%f",&aluno[i].nota2);
+	aluno[i].calc_media();
+	aluno[i].maxmin_nota();
+	}
+	printf("MAT	NOTA1	NOTA2	MEDIA	MAIOR NOTA	MENOR NOTA\n");
+    for(int i=0;i<TAM;i++)
+	{
+		printf("%d	%.2f	%.2f	%.2f	%.2f		%.2f\n",aluno[i].mat, aluno[i].nota1, aluno[i].nota2, aluno[i].media, aluno[i].maior, aluno[i].menor);
+	}
+
+getch();
+}
+
+
+

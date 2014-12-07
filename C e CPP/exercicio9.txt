@@ -1,0 +1,29 @@
+
+
+
+
+
+#include <cstdlib>
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    float n1, n2, n3, media;
+    char nome[15];
+    n1=0;
+    n2=0;
+    n3=0;
+    media=0;
+    
+    printf("nome do aluno\n");
+    scanf("%s", &nome);
+    printf("notas\n");
+    scanf("%f %f %f", &n1, &n2, &n3);
+    media = (n1 + n2 + n3) /3;
+    printf("o aluno %s teve notas %.1f , %.1f , %.1f , e media %.1f", nome, n1, n2, n3, media);
+    getch();
+    return(0);
+
+}

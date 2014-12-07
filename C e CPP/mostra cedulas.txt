@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main (void)
+{
+	int quant;
+	int ced[5];
+
+		printf("digitia a quantia em dinheiro\n");
+		scanf("%d", &quant);
+
+		ced[0]=quant/100;
+		quant=quant - ced[0]*100;
+		ced[1]=quant/50;
+		quant=quant - ced[1]*50;
+		ced[2]=quant/10;
+		quant=quant - ced[2]*10;
+		ced[3]=quant/5;
+		quant=quant - ced[3]*5;
+		ced[4]=quant;
+
+		printf("%d cedulas de R$100,00\n", ced[0]);
+		printf("%d cedulas de R$50,00\n", ced[1]);
+		printf("%d cedulas de R$10,00\n", ced[2]);
+		printf("%d cedulas de R$5,00\n", ced[3]);
+		printf("%d cedulas de R$1,00\n", ced[4]);
+		getch();
+}
+

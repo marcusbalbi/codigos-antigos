@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main ()
+{
+	int num,soma,pares;
+    pares=0;
+	soma=0;
+	printf("digite o numero");
+	scanf("%d",&num);
+	while (pares<=num)
+	{
+		soma=soma+pares;
+		pares=pares+2;
+	}
+	printf("resultado %d",soma);
+	getch();
+}
