@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class table="alunos" name="havahibernate.alunos">
+      <id name="aluno_codigo" column="aluno_codigo" type="integer"/>
+      <property name="aluno_nome" column="aluno_nome" />
+      <property name="aluno_curso" column="aluno_curso"/>
+      <property name="aluno_cidade" column="aluno_cidade"/>
+      <property name="aluno_fone" column="aluno_fone"/>
+  </class>
+</hibernate-mapping>
