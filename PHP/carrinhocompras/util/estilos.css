@@ -1,0 +1,97 @@
+/* CSS Document */
+.titulos_listas
+{
+	color:#060;
+	background-color:#0C3;
+	font-weight:bold;
+	
+}
+
+.itens_tabela_banco
+{
+	color:#C30;
+	
+}
+
+.ordenacao_novo_registro
+{
+ 	border-color:transparent;
+	color:#03F;
+	font-weight:bold;
+	
+}
+
+
+.alterar_excluir
+{
+	color:#906;
+	text-align:center;
+	
+} 
+
+.alterar_excluir a:hover
+{
+	color:#060;
+}
+
+.borda_tabela
+{
+	border-collapse:collapse;
+
+	background-color:#CCC;
+}
+
+
+.linha
+{
+	background-color:#CCC;
+	
+}
+
+.linha:hover
+{
+	background-color:#F2F0A2;
+}
+
+a
+{
+	text-decoration:none;
+	color:#039;
+
+	
+}
+
+.titulo_sistema
+{
+	font-size:24px;
+	text-align:center;
+	font-weight:bold;
+	color:#000066
+}
+
+.menu
+{
+	color:#009;
+	text-align:left;
+	
+}
+
+.menu a:hover
+{
+	color:#C00;
+}
+
+.mostraproduto
+{
+	width:150px;
+	height:150px;
+	padding:10px;
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:5px;
+	border-top:1px solid #aaa;
+	border-bottom:1px solid #aaa;
+	border-left:1px solid #aaa;
+	border-right:1px solid #aaa;
+}

@@ -1,0 +1,70 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/show.css" rel="stylesheet">
+        <script src="scripts/jquery-1.8.1.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                
+               
+               $(function(){
+                   
+                   var status = $("#status");
+                   
+                $("span[contenteditable=true]").blur(function(){
+                    
+                var campo = $(this).attr("id");
+                
+                var valor = $(this).text();
+                
+                
+                $.post("http://localhost/html5/users/1",
+                campo+"="+valor,
+                function(data){status.text(data)}) });
+                   
+               });
+                
+                
+            });
+            
+        </script>
+        
+    </head>
+    
+    <body>
+      
+        <h1>Informação do Usuário</h1>
+        
+        <div id="status">
+            <ul>
+                <li>
+                    <b>Nome:</b>
+                    <span id="name" contenteditable="true" >João Carlos</span>
+                </li>
+                <li>
+                    <b>Cidade:</b>
+                    <span id="city" contenteditable="true">Nova Friburgo</span>
+                </li>
+                <li>
+                    <b>Estado:</b>
+                    <span id="state" contenteditable="true">RJ</span>
+                </li>
+                <li>
+                    <b>Cep:</b>
+                    <span id="cep" contenteditable="true">28625-530</span>
+                </li>
+                <li>
+                    <b>Email</b>
+                    <span id="email" contenteditable="true">joaobalbi@hotmail.com</span>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

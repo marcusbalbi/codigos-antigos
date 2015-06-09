@@ -1,0 +1,87 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script src="js/jquery-1.8.1.js" type="text/javascript"></script>
+        <script src="js/jquery.simple-color.js" type="text/javascript"></script>
+    </head>
+    <body>
+    
+        <form method="post" action="/projects/1">
+            <fieldset id="personal_information">
+                <legend>Informações sobre o Projeto</legend>
+                
+                <ol>
+                    <li>
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" autofocus/>
+                    </li>
+                    <li>
+                        <label for="prioridade">Prioridade:</label>
+                        <input type="range" min="0" max="10" value="0" name="prioridade" id="prioridade"/>
+                    </li>
+                     <li>
+                        <label for="horas">Horas:</label>
+                        <input type="number" min="0" max="1000"  value="0" name="horas" id="horas"/>
+                    </li>
+                    
+                     <li>
+                        <label for="data_inicio">Data Inicio:</label>
+                        <input type="date"  value="2012-09-01" name="data_inicio" id="data_inicio"/>
+                    </li>
+                    
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email"/>
+                    </li>
+                    
+                      <li>
+                        <label for="url">Site:</label>
+                        <input type="url" name="url" id="url"/>
+                    </li>
+                    
+                      <li>
+                        <label for="cor_projeto">Cor do Projeto:</label>
+                        <input type="color"  name="cor_projeto" id="cor_projeto"/>
+                    </li>
+                    <li><input type="submit" value="Enviar" name="enviar" id="enviar" /> </li>
+                </ol>
+            </fieldset>
+            
+        </form>
+        
+    </body>
+    <script>
+        $(document).ready(function()
+        {
+            
+            function hasColorSupport(){
+              input = document.createElement("input");
+              input.setAttribute("type", "color");
+              var hasColorType = (input.type !== "text");
+              // handle Safari/Chrome partial implementation
+              if(hasColorType){
+                var testString = "foo";  
+                input.value=testString;
+                hasColorType = (input.value != testString);
+              }
+              return(hasColorType);
+            }
+            
+            
+            if(!hasColorSupport())
+            {
+                $('input[type=color]').simpleColor();
+            }
+        });
+        
+    </script>
+</html>
+
+

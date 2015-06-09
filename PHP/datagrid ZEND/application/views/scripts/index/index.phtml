@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link href="/datagrid/public/css/flexigrid.css" rel="stylesheet">
+         <script type="text/javascript" src="/datagrid/public/js/jquery-1.7.1.js" ></script>
+        <script type="text/javascript" src="/datagrid/public/js/flexigrid.js" ></script>
+       
+    </head>
+    <body>
+        <table id="tabela">
+            <thead>
+            </thead>
+                </tbody>
+        </table>
+
+
+        <script type="text/javascript" >
+
+           $("#tabela").flexigrid({
+            url: '<?php echo $this->url(array("controller"=>"index","action"=>"pegarprodutos"),null,true); ?>',
+            dataType: 'json',
+            colModel : [
+                    {display: 'ID', name : 'id', width : 40, sortable : true, align: 'center'},
+                    {display: 'cidade', name : 'cidade', width : 180, sortable : true, align: 'left'},
+                    ],
+            searchitems : [
+                    {display: 'ISO', name : 'iso'},
+                    {display: 'Name', name : 'name', isdefault: true}
+                    ],
+            sortname: "id",
+            sortorder: "asc",
+            usepager: true,
+            title: 'CIDADES',
+            useRp: false,
+            rp: 10,
+            showTableToggleBtn: true,
+            width: 700,
+            height: 200
+        });
+
+        </script>
+    </body>
+
+</html>

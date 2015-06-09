@@ -1,0 +1,1 @@
+<?php  echo "Seja Bem vindo ao site";  ?>

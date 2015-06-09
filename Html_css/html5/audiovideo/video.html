@@ -1,0 +1,35 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <article>
+        <header><h2>Vasco Libertadores</h2></header>
+        <video id="vasco" controls>
+            
+            <source src="videos/vasco_VP8.webm">
+            <source src="videos/vasco_libtheora.ogv">
+            <source src="videos/vasco_x264.mp4">
+            
+            <object width="640" height="480" type="application/x-shockwave-flash" data="swf/flowplayer.swf">
+                
+                <param name="movie" value="swf/flowplayer.swf"/>
+                
+                <param name="allowfullscreen" value="true"/>
+                
+                <param name="flashvars" value='config={"clip":{"url":"../videos/vasco_x264.mp4", "autoplay":"false", "autobuffering":"true"} }' />
+                
+                    
+                
+            </object>
+            
+        </video>
+        </article>
+    </body>
+</html>

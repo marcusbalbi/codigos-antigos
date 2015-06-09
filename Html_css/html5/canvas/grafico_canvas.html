@@ -1,0 +1,92 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script type="text/javascript" src="scripts/jquery-1.8.1.js"></script>
+        <script type="text/javascript" src="RGraph/libraries/RGraph.common.core.js" ></script>
+        <script type="text/javascript" src="RGraph/libraries/RGraph.bar.js" ></script>
+        
+    </head>
+    <body>
+       
+        <canvas id="browsers" width="500" height="250" >
+            
+        </canvas>
+        <div id="graph_data">
+            <h1>Distribuição de navegadores para este site</h1>
+            
+            <ul>
+                <li>
+                    <p data-name="Safari 4" data-percent="15">Safari 4-15%</p>
+                </li>
+                
+                <li>
+                    <p data-name="Internet Explorer" data-percent="55">Internet Explorer - 55%</p>
+                </li>
+                
+                
+                <li>
+                    <p data-name="Firefox" data-percent="14">FIrefox - 14%</p>
+                </li>
+                
+                
+                <li>
+                    <p data-name="Google Chrome" data-percent="16">Google Chrome - 16%</p>
+                </li>
+                
+                
+            </ul>
+        </div>
+        
+        <script type="text/javascript" charset="utf-8">
+            
+            
+            function canvasGraph()
+            {
+                var title = $("#graph_data h1").text();
+                
+                var labels = $("#graph_data >ul>li>p[data-name]").map(function(){
+                    
+                return $(this).attr("data-name");
+                    
+                });
+                
+                var percents = $("#graph_data >ul>li>p[data-percent]").map(function(){
+                    
+                return  parseInt($(this).attr("data-percent"));
+                    
+                });
+                
+                
+                var bar = new RGraph.Bar("browsers", percents);
+
+                bar.Set("chart.gutter", 50);
+                bar.Set("chart.colors", ['blue']);
+                bar.Set("chart.title", title);
+                bar.Set("chart.labels", labels);
+
+                bar.Draw();                
+            }
+            
+        var canv = document.getElementById('browsers');
+        
+        if(canv.getContext)
+            {
+                $("#graph_data").hide();
+                canvasGraph();
+            }   
+            
+            
+            
+            
+        </script>
+        
+        
+    </body>
+</html>

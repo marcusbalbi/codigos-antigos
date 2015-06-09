@@ -1,0 +1,38 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas id="meu_canvas" width="150" height="150">
+            Conteudo de compatibilização aqui!
+        </canvas>
+    </body>
+    <script type="text/javascript">
+        
+        var canvas = document.getElementById("meu_canvas");
+        
+        if(canvas.getContext)
+            {
+                var context = canvas.getContext("2d");
+            }
+            else
+            {
+                //FAZER ALGO PARA MOSTRAR O CONTEUDO OCULTO DO CANVAS
+                //OU DEIXAR O NAVEGADOR MOSTRAR O TEXTO CONTIDO EM CANVAS
+            }
+            
+            context.fillStyle = "rgb(200,0,0)";
+            
+             context.fillRect(10, 10, 100, 100);
+             
+       
+        
+        
+    </script>
+</html>

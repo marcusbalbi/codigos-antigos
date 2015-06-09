@@ -1,0 +1,37 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script type="text/javascript" src="RGraph/libraries/RGraph.common.core.js" ></script>
+        <script type="text/javascript" src="RGraph/libraries/RGraph.bar.js" ></script>
+        
+    </head>
+    <body>
+        
+        
+        <canvas width="500"  height="250" id="test">
+            [No canvas Support]
+        </canvas>
+        
+        <script type="text/javascript" charset="utf-8" >
+            
+            var bar = new RGraph.Bar("test", [50,25,15,10]);
+            
+            bar.Set("chart.gutter", 100);
+            bar.Set("chart.colors", ['orange']);
+            bar.Set("chart.title", "Um gráfico de barras de tortas favoritas");
+            bar.Set("chart.labels", ["Banana","Limão","Maçã","Coco"]);
+            
+            bar.Draw();
+            
+            
+        </script>
+        
+    </body>
+</html>

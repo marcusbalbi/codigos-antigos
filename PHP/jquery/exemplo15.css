@@ -1,0 +1,22 @@
+/* 
+    Document   : exemplo15.css
+    Created on : 17/03/2012, 16:56:05
+    Author     : Marcus
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.box
+{
+    width: 200px;
+}
+

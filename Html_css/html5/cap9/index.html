@@ -1,0 +1,103 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="../scripts/jquery-1.8.1.js"></script>
+    </head>
+    <body>
+        <p><strong>Preferencias</strong></p>
+        <form accept-charset="utf-8" method="post" id="preferencias" action="save_pref">
+            <fieldset id="colors" class="">
+                <legend>Cores</legend>
+                <ol>
+                <li>
+                <label for="background_color">Cor de Fundo:</label>
+                <input type="color" id="background_color" value="" >
+                </li>
+                
+                <li>
+                <label for="text_color">Cor do texto:</label>
+                <input type="color" id="text_color" value="" >
+                </li>
+                
+                <li>
+                    <label for="text_size">Tamanho do texto:</label>
+                    <select name="text_size" id="text_size">
+                        <option value="16">16px</option>
+                        <option value="20">20px</option>
+                        <option value="24">24px</option>
+                        <option value="32">32px</option>
+                        
+                    </select>
+                </li>
+                
+                </ol>
+                
+                
+                
+                
+
+            </fieldset>
+                            <input type="submit" name="salvar" id="salvar" value="Salvar Valores">
+        </form>
+        
+        
+    <script type="text/javascript" >
+        $(document).ready(function(){
+            
+            load_settings();
+            
+            $("#preferencias").submit(function(event){
+                event.preventDefault();
+                saveSettings();
+                
+            });
+            
+            
+            function saveSettings()
+            {
+                localStorage.setItem("background_color",$("#background_color").val());
+                localStorage.setItem("text_color",$("#text_color").val());
+                localStorage.setItem("text_size",$("#text_size").val());
+                
+                apply_preferencies_to_page();
+                
+            }
+            
+            function load_settings()
+            {
+              var bgcolor =   localStorage.getItem("background_color");
+              
+              var txtcolor =   localStorage.getItem("text_color");
+              
+              var txt_size = localStorage.getItem("text_size");
+              
+            $("#background_color").val(bgcolor);
+            $("#text_color").val(txtcolor);;
+            $("#text_size").val(txt_size);
+            
+                apply_preferencies_to_page();              
+        }
+            function apply_preferencies_to_page()
+            {
+                $("body").css("backgroundColor",$("#background_color").val());
+                
+                $("body").css("color",$("#text_color").val());
+                
+                $("body").css("fontSize",$("#text_size").val());
+                
+            }
+            
+        });
+    
+    
+</script>
+        
+    </body>
+    
+</html>

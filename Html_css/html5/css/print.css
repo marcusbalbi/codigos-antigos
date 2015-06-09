@@ -1,0 +1,15 @@
+
+/* 
+    Document   : print.css
+    Created on : 22/09/2012, 13:33:32
+    Author     : Marcus
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+a:after
+{
+    content: " ("attr(href)") "
+}
+

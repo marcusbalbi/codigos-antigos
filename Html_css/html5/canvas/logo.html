@@ -1,0 +1,98 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="scripts/jquery-1.8.1.js"></script>
+        
+        <!-- [if lte IE 8] -->
+        <script type="text/javascript" src="scripts/excanvas.js"></script> 
+        
+        <!-- [endif] -->
+        
+        <script>
+        var desenharLogo = function(){
+         
+            var canvas = document.getElementById("logo");
+            
+            var context = canvas.getContext("2d");  
+            
+            
+            //PREENCHENDO O TEXTO
+            context.font = "italic 40px sans-serif";
+            context.textBaseline = "top";
+            context.fillText("EspetaculoSA",60,0);
+            
+            
+            //DESENHANDO A LINHA
+            context.lineWidth = 2;
+            context.beginPath();
+            context.moveTo(0,40);
+            context.lineTo(30, 0);
+            context.lineTo(60,40);
+            context.lineTo(285,40);
+            context.stroke();
+            context.closePath();
+            
+            context.save();
+            
+            
+            context.translate(20, 20);
+            context.fillRect(0, 0, 20, 20);
+            
+            
+            var gradient = context.createLinearGradient(0, 10, 20, 40);
+            
+            gradient.addColorStop(0, "#fff");
+            gradient.addColorStop(1,"#f00");
+            
+            
+            
+            context.fillStyle = gradient;
+            context.strokeStyle = gradient;
+            context.lineWidth = 2;
+            
+            context.beginPath();
+            context.moveTo(0, 20);
+            context.lineTo(10, 0);
+            context.lineTo(20, 20);
+            context.lineTo(0, 20);
+            context.fill();
+            
+            context.closePath();
+            context.restore();
+            
+           
+          
+           
+            
+        };
+        
+        
+        $(function(){
+            
+            var canvas = document.getElementById("logo");
+            
+            if(canvas.getContext)
+                desenharLogo();
+            
+            
+            
+        });
+        
+        
+    </script>
+</html>
+        
+    </head>
+    <body>
+        <canvas id="logo" width="900" height="80">
+            <h1>EspetaculoSA</h1>
+        </canvas>
+       
+    </body>
+</html>
